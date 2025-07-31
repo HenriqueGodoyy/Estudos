@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio</title>
+</head>
+<body>
+    <h1>Qual país que você mora?</h1>
+    <p>Em qual país você mora? <input type="text" name="txtvel" id="txtvel"></p>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resp"></div>
+    
+    <script>
+        function calcular() {
+            var pais = document.getElementById('txtvel').value.trim() // Pegando o valor do input
+            var res = document.getElementById('resp') // Corrigindo ID
+            
+            res.innerHTML = `<p>Você mora no país: ${pais}</p>`
+            
+            if (pais === "Brasil") { // Comparação correta
+                res.innerHTML += `<p>Você é brasileiro!</p>`
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>

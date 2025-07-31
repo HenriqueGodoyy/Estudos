@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: lightblue;
+            color: white;
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body //selecionar o corpo
+        var p1 = window.document.getElementsByTagName('p')[1] //selecionar o primeiro paragrafo
+        var d = window.document.getElementsByTagName('msg')
+
+        corpo.style.background = 'black' //selecionar o corpo e dar cor
+        p1.style.color = 'blue' // selecionar e colorir o primeiro paragrafo
+        window.document.write('Esta escrito: ' + p1.innerHTML) // selecionar e replicar o primeiro paragrafo
+        
+        //d.stylebackground = 'green' em comentario pq ta bugando
+        
+        
+        
+        //window.alert(p1.innerText)    em comentario so para nao atrapalhar o live server
+
+        //Obs: o p1.innerText nao pega as formatacoes tipo o strong, agora usando o innerHTMl ele ja copia tudo
+    </script>
+</body>
+</html>
